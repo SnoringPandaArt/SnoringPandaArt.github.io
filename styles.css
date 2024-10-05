@@ -1,0 +1,128 @@
+/* Global Styles */
+body {
+    background-color: #1a1a1a; /* Dark background for eerie atmosphere */
+    color: #e0e0e0; /* Light text for contrast against the dark background */
+    font-family: 'Courier New', Courier, monospace; /* Choose a typewriter-style font for a spooky effect */
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+h2, h3 {
+    color: #ff3333; /* Blood-red color for headings */
+    text-shadow: 2px 2px 5px #000; /* Shadow for a more ominous effect */
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 15px 0;
+}
+
+a {
+    color: #ff6666; /* Light red for links */
+    text-decoration: none;
+    border-bottom: 2px solid #ff6666;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: #ffffff; /* White on hover for extra contrast */
+    border-bottom: 2px solid #ffffff;
+}
+
+/* Audio Player Styles */
+audio {
+    display: block; /* Ensures the audio player is visible */
+    margin: 20px auto; /* Centers the audio player */
+    width: 300px; /* Custom width for the player */
+    border: 2px solid #fff; /* Optional: white border around the player */
+    background-color: #111; /* Optional: dark background */
+    padding: 10px;
+}
+
+/* Forces visibility and opacity of the audio controls */
+audio[controls] {
+    visibility: visible !important; /* Forces the controls to be visible */
+    opacity: 1 !important; /* Full opacity to prevent any hiding */
+}
+
+/* Button Styles */
+button, .button {
+    background-color: #ff3333; /* Red background for buttons */
+    color: #ffffff; /* White text */
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    text-transform: uppercase;
+    border-radius: 5px;
+}
+
+button:hover, .button:hover {
+    background-color: #ff6666; /* Lighter red on hover */
+}
+
+/* Container for layout */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Spooky Background Elements */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('path-to-your-foggy-background.jpg'); /* Add your spooky background image */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2; /* Low opacity for eerie fog effect */
+    z-index: -1; /* Ensures it stays in the background */
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Special styling for Easter eggs or hidden sections */
+.hidden-section {
+    color: #cc0000;
+    font-style: italic;
+    display: none;
+}
+
+.hidden-section.active {
+    display: block;
+}
+
+/* Optional: Style hover effects for a spooky touch */
+a, button {
+    transition: all 0.3s ease;
+}
+
+a:hover, button:hover {
+    color: #fff;
+    background-color: #cc0000;
+}
+
+/* Footer styles (if any) */
+footer {
+    font-size: 14px;
+    color: #666;
+    margin-top: 50px;
+    text-align: center;
+}
+
