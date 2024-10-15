@@ -4,24 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <h1>My Portfolio</h1>
-
-<h1>My journey into an artistic chasm.</h1>
-
-<h2>Creation. Unrestricted.</h2>
-    <nav>
-        <ul>
-            <li><a href="glitch.html">Glitch Page</a></li>
-            <li><a href="mememashup.html">Mememashup Page</a></li>
-            <h2>About Me:</h2>
-<h4>My name is Brandon Vuong. I am an aspiring digital artist and dabble in other mediums. My interpretation of art is bringing about change and making strong statements that speak louder than the rioting souls we all carry individually within ourselves. This portfolio is an embodiment of my slow and methodical descent into art and this is where I try and make sense of a nonsensical world with my own two hands.</h4>
-
- <img src="pp.jpg" alt="profile_pic" width="300">
-
-<p>Born and raised in the Silicon Valley where rent is too high and creativity is at an all time low. My inspiration stems from Shepard Fairey and Banksey where art becomes a weapon against the modern day giants and tyrannical fists with their blur-bars in hand. </p>
-        </ul>
+    <!-- Full-width Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Brandon Vuong</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="glitch.html">Glitch Page</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="mememashup.html">Mememashup Page</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
+
+    <!-- Main Section -->
+    <header class="bg-dark text-white text-center py-5">
+        <div class="container">
+            <h1 class="display-4">My Journey Into an Artistic Chasm</h1>
+            <p class="lead">Creation. Unrestricted.</p>
+        </div>
+    </header>
+
+    <!-- About Me Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4 text-center">
+                    <img src="pp.jpg" alt="profile_pic" class="img-fluid rounded-circle" width="300">
+                </div>
+                <div class="col-md-8">
+                    <h2>About Me</h2>
+                    <p class="lead">My name is Brandon Vuong. I am an aspiring digital artist and dabble in other mediums. My interpretation of art is bringing about change and making strong statements that speak louder than the rioting souls we all carry individually within ourselves.</p>
+                    <p>This portfolio is an embodiment of my slow and methodical descent into art and where I try to make sense of a nonsensical world with my own two hands.</p>
+                    <p>Born and raised in the Silicon Valley, where rent is too high, and creativity is at an all-time low. My inspiration stems from Shepard Fairey and Banksy, where art becomes a weapon against the modern-day giants and tyrannical fists with their censor bars in hand.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap 5 JS and Popper.js (for responsive navbar functionality) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
