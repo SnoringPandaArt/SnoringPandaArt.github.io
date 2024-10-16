@@ -4,19 +4,113 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mememashup Page</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa; /* Light background */
+        }
+        .navbar {
+            background-color: #212529; /* Darker Gray */
+        }
+        .navbar-brand, .nav-link {
+            color: white !important; /* White text */
+        }
+        .header-section {
+            background-color: #343a40; /* Dark Gray */
+            color: white;
+            padding: 40px 0;
+        }
+        .content-section {
+            padding: 20px;
+            background-color: #e9ecef; /* Light gray */
+            border-radius: 5px;
+        }
+        .image-wrapper {
+            border: 2px solid #dee2e6; /* Light border */
+            border-radius: 5px;
+            transition: transform 0.2s; /* Animation on hover */
+            cursor: pointer;
+        }
+        .image-wrapper:hover {
+            transform: scale(1.05); /* Scale up on hover */
+        }
+    </style>
 </head>
 <body>
-    <h1>Mememashup Project</h1>
-    <h1>"They're Eating Rex!"
-2024. Sept 14</h1>
-    <h3>Satire Approach to Trump VS Harris Debate</h3>
+    <!-- Navbar with links to other pages -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Brandon Vuong</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="glitch.html">Glitch Page</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="mememashup.html">Mememashup Page</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="minecraft_art.html">Minecraft Art</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="net_art.html">Net ART</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="traditional_work.html">Traditional Work</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="photography.html">Photography Work</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
-<img src="Mememashup.png" alt="Mememashup">
-    <p>Photoshop Demo. It seems that as the presidential debate continues, it's starting to feel more and more like a very bad comedy. Two individuals duking it out with political jargon thrown in the mix to stay relevant. Maybe we 're oblivious people running around in circles and there are people out there eating your neighbors pets. I'm sure pigs can fly one day.</p>
-    <nav>
-        <ul>
-            <li><a href="index.html">Back to Portfolio</a></li>
-        </ul>
-    </nav>
+
+    <!-- Header Section -->
+    <header class="header-section text-center">
+        <div class="container">
+            <h1 class="display-4">"They're Eating Rex!"</h1>
+            <h2>2024. Sept 14</h2>
+            <h3>Satire Approach to Trump VS Harris Debate</h3>
+        </div>
+    </header>
+
+    <!-- Content Section -->
+    <section class="content-section">
+        <div class="container text-center">
+            <!-- Image with Hover Effect -->
+            <div class="image-wrapper" data-bs-toggle="modal" data-bs-target="#mememashupModal">
+                <img src="Mememashup.png" alt="Mememashup" class="img-fluid rounded" width="900">
+            </div>
+            <!-- Modal for Image -->
+            <div class="modal fade" id="mememashupModal" tabindex="-1" aria-labelledby="mememashupModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="mememashupModalLabel">"They're Eating Rex!"</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Photoshop Demo. It seems that as the presidential debate continues, it's starting to feel more and more like a very bad comedy. Two individuals duking it out with political jargon thrown in the mix to stay relevant. Maybe we are oblivious people running around in circles and there are people out there eating your neighbors' pets. I'm sure pigs can fly one day.
+                            <img src="Mememashup.png" alt="Mememashup" class="img-fluid rounded mt-3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p class="mt-4 lead">Photoshop Demo. The main purpose of this assignment was to showcase modern and relevant ideas that describe and define our society while using photoshop and colliding the methods with memes because nothing keeps anything more relevant than tongue-and-cheek humor with a hint of satire.</p>
+        </div>
+    </section>
+
+    <!-- Bootstrap 5 JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

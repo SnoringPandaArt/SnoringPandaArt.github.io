@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glitch Page</title>
+    <title>Glitch Projects</title>
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            background-color: #f8f9fa; /* Light background for contrast */
+            background-color: #f8f9fa; /* Light background */
         }
         .navbar {
             background-color: #212529; /* Darker Gray */
@@ -23,14 +23,14 @@
         }
         .content-section {
             padding: 20px;
-            background-color: #e9ecef; /* Light gray for contrast */
+            background-color: #e9ecef; /* Light gray */
             border-radius: 5px;
         }
         .image-wrapper {
             border: 2px solid #dee2e6; /* Light border */
             border-radius: 5px;
             transition: transform 0.2s; /* Animation on hover */
-            cursor: pointer; /* Change cursor to pointer */
+            cursor: pointer;
         }
         .image-wrapper:hover {
             transform: scale(1.05); /* Scale up on hover */
@@ -38,30 +38,46 @@
         .image-container {
             display: flex;
             justify-content: center;
-            gap: 20px; /* Space between images */
+            gap: 20px;
         }
     </style>
 </head>
 <body>
-    <!-- Full-width Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Glitch Projects</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="mememashup.html">MemeMash</a>
-                    </li>
-                </ul>
-            </div>
+    <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Brandon Vuong</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="glitch.html">Glitch Page</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="mememashup.html">Mememashup Page</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="minecraft_art.html">Minecraft Art</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="net_art.html">Net ART</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="traditional_work.html">Traditional Work</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="photography.html">Photography Work</a>
+                </li>
+            </ul>
         </div>
-    </nav>
+    </div>
+</nav>
+
 
     <!-- Main Header Section -->
     <header class="header-section text-center">
@@ -74,24 +90,22 @@
     <!-- Content Section -->
     <section class="content-section">
         <div class="container">
-            <h3>Exploration of delving deeper into what lies underneath pictures we see in our daily lives and making a mess of the image beyond recognition.</h3>
-            
-            <!-- Flex Container for Images -->
+            <div class="container display-6 text-center">Exploration of delving deeper into what lies underneath pictures we see in our daily lives and making a mess of the image beyond recognition.</div>
             <div class="image-container">
                 <!-- Image 1 -->
                 <div class="image-wrapper" data-bs-toggle="modal" data-bs-target="#modalMished">
-                    <img src="mish.jpg" alt="mish" class="img-fluid rounded" width="500">
+                    <img src="mish.jpg" alt="Mished" class="img-fluid rounded" width="500">
                 </div>
                 <!-- Modal for Image 1 -->
                 <div class="modal fade" id="modalMished" tabindex="-1" aria-labelledby="modalLabelMished" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="modalLabelMished">"Mished" 2024</h5>
+                                <h5 class="modal-title" id="modalLabelMished">"Mished" 2024. Sept. 07 </h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                Data Bending demonstration. Before mashing a potato, you're expected to peel a potato and then mash it. Maybe I missed a few steps before I got here. This involved going into the code makeup of the image and adding unconventional code strings that gave me this.
+                                Data Bending demonstration. Before mashing a potato, you're expected to peel a potato and then mashed. Maybe I missed a few steps before I got here. This involved the use of going into the code make-up of the image and adding in unconventional code strings that gave me this.
                                 <img src="mish.jpg" alt="mished" class="img-fluid rounded" width="700">
                             </div>
                         </div>
@@ -100,18 +114,18 @@
 
                 <!-- Image 2 -->
                 <div class="image-wrapper" data-bs-toggle="modal" data-bs-target="#modalMashed">
-                    <img src="mashed.jpg" alt="mashed" class="img-fluid rounded" width="500">
+                    <img src="mashed.jpg" alt="Mashed" class="img-fluid rounded" width="500">
                 </div>
                 <!-- Modal for Image 2 -->
                 <div class="modal fade" id="modalMashed" tabindex="-1" aria-labelledby="modalLabelMashed" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="modalLabelMashed">"Mashed" 2024</h5>
+                                <h5 class="modal-title" id="modalLabelMashed">"Mashed" 2024. Sept. 07 </h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                Data Bending and Data Moshing demonstration where a harmless photo of commercial-ready mashed potato gets bent. If we can mash the insides of a potato, what's stopping us from doing the same with the photo's code?
+                                Data Bending and Data Moshing demonstration where a harmless photo of commercial ready mashed potato gets bent. If we can mash the insides of a potato, what's stopping us from doing the same with the photo's code?
                                 <img src="mashed.jpg" alt="mashed" class="img-fluid rounded" width="700">
                             </div>
                         </div>
@@ -120,18 +134,18 @@
 
                 <!-- Image 3 -->
                 <div class="image-wrapper" data-bs-toggle="modal" data-bs-target="#modalMoshed">
-                    <img src="moshed.png" alt="moshed" class="img-fluid rounded" width="500">
+                    <img src="moshed.png" alt="Moshed" class="img-fluid rounded" width="500">
                 </div>
                 <!-- Modal for Image 3 -->
                 <div class="modal fade" id="modalMoshed" tabindex="-1" aria-labelledby="modalLabelMoshed" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="modalLabelMoshed">"Moshed" 2024</h5>
+                                <h5 class="modal-title" id="modalLabelMoshed">"Moshed" 2024. Sept. 07 </h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                Data Moshing demonstration. Something funny about digitally cooking an image until it's essentially burnt. My demonstration is meant to highlight the usage of highlighting a code of an image and using other tools like Audacity and Notepad++ and mashing the two tools together. Some use ricers, others use mashers; I used programs.
+                                Data Moshing demonstration. Something funny about digitally cooking an image until it's essentially burnt. My demonstration is meant to highlight the usage of highlighting a code of an image and using other tools like Audacity and Note Pad++ and mashing the two tools together. Some use ricers, others use mashers, I used programs.
                                 <img src="moshed.png" alt="moshed" class="img-fluid rounded" width="700">
                             </div>
                         </div>
@@ -141,7 +155,7 @@
         </div>
     </section>
 
-    <!-- Bootstrap 5 JS and Popper.js (for responsive navbar functionality) -->
+    <!-- Bootstrap 5 JS and Popper.js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
