@@ -40,44 +40,49 @@
             justify-content: center;
             gap: 20px;
         }
+        .iframe-container {
+            display: flex;
+            justify-content: center; /* Centers the iframe horizontally */
+            align-items: center; /* Centers the iframe vertically */
+            height: 600px; /* Sets a height to ensure proper vertical centering */
+        }
     </style>
 </head>
 <body>
     <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">Brandon Vuong</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="glitch.html">Glitch Page</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="mememashup.html">Mememashup Page</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="minecraft_art.html">Minecraft Art</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="net_art.html">Net ART</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="traditional_work.html">Traditional Work</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="photography.html">Photography Work</a>
-                </li>
-            </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Brandon Vuong</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="glitch.html">Glitch Page</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="mememashup.html">Mememashup Page</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="minecraft_art.html">Minecraft Art</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="net_art.html">Net ART</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="traditional_work.html">Traditional Work</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="photography.html">Photography Work</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
-
+    </nav>
 
     <!-- Main Header Section -->
     <header class="header-section text-center">
@@ -90,10 +95,10 @@
     <!-- Content Section -->
     <section class="content-section">
         <div class="container">
-          
-            <iframe src="diypsbrushes/index.html" height="606" width="606" title="Iframe Example"></iframe>
-
-
+            <!-- Centered iframe -->
+            <div class="iframe-container">
+                <iframe src="diypsbrushes/index.html" height="606" width="606" title="Iframe Example"></iframe>
+            </div>
         </div>
     </section>
 
