@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glitch Projects</title>
+    <title>The Headache BallGame!</title> <!-- Updated title -->
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
@@ -26,74 +26,69 @@
             background-color: #e9ecef; /* Light gray */
             border-radius: 5px;
         }
-        .image-wrapper {
-            border: 2px solid #dee2e6; /* Light border */
-            border-radius: 5px;
-            transition: transform 0.2s; /* Animation on hover */
-            cursor: pointer;
-        }
-        .image-wrapper:hover {
-            transform: scale(1.05); /* Scale up on hover */
-        }
-        .image-container {
+        .iframe-container {
             display: flex;
-            justify-content: center;
-            gap: 20px;
+            justify-content: center; /* Centers the iframe horizontally */
+            align-items: center; /* Centers the iframe vertically */
+            height: 600px; /* Ensures proper vertical centering */
+            margin-top: 30px; /* Adds some space from the top */
+        }
+        iframe {
+            border: none; /* Optional: Remove iframe border */
         }
     </style>
 </head>
 <body>
     <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">Brandon Vuong</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="glitch.html">Glitch Page</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="mememashup.html">Mememashup Page</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="minecraft_art.html">Minecraft Art</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="net_art.html">Net ART</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="traditional_work.html">Traditional Work</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="photography.html">Photography Work</a>
-                </li>
-            </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Brandon Vuong</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="headache.html">The Headache BallGame!</a> <!-- Updated link to the new page name -->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="mememashup.html">Mememashup Page</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="minecraft_art.html">Minecraft Art</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="net_art.html">Net ART</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="traditional_work.html">Traditional Work</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="photography.html">Photography Work</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
-
+    </nav>
 
     <!-- Main Header Section -->
     <header class="header-section text-center">
         <div class="container">
-            <h1 class="display-4">Glitch Projects</h1>
-            <h2><i>Mished, Mashed, Moshed</i></h2>
+            <h1 class="display-4">The Headache BallGame!</h1> <!-- Updated header -->
+            <h2><i>Where every move is a challenge</i></h2> <!-- Updated subtitle -->
         </div>
     </header>
 
     <!-- Content Section -->
     <section class="content-section">
         <div class="container">
-          
-            <iframe src="headache/index.html" height="606" width="606" title="Iframe Example"></iframe>
-
-
+            <!-- Centered iframe -->
+            <div class="iframe-container">
+                <iframe src="headache/index.html" height="606" width="606" title="The Headache BallGame"></iframe>
+            </div>
         </div>
     </section>
 
