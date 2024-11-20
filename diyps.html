@@ -3,32 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glitch Projects</title>
+    <title>My Portfolio</title>
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        body {
-            background-color: #f8f9fa; /* Light background */
-        }
-        .navbar {
-            background-color: #212529; /* Darker Gray */
-        }
-        .navbar-brand, .nav-link {
-            color: white !important; /* White text */
-        }
+        /* Custom styles for header background */
         .header-section {
-            background-color: #343a40; /* Dark Gray */
+            background-color: #343a40; /* Dark Gray color */
             color: white;
-            padding: 40px 0;
+            padding: 5rem 0; /* Padding for the header */
         }
-        .content-section {
-            padding: 20px;
-            background-color: #e9ecef; /* Light gray */
-            border-radius: 5px;
-        }
+        /* Additional custom styling for DIY Brushes section */
         .image-wrapper {
             border: 2px solid #dee2e6; /* Light border */
             border-radius: 5px;
+            margin-bottom: 20px;
             transition: transform 0.2s; /* Animation on hover */
             cursor: pointer;
         }
@@ -40,16 +29,10 @@
             justify-content: center;
             gap: 20px;
         }
-        .iframe-container {
-            display: flex;
-            justify-content: center; /* Centers the iframe horizontally */
-            align-items: center; /* Centers the iframe vertically */
-            height: 600px; /* Sets a height to ensure proper vertical centering */
-        }
     </style>
 </head>
 <body>
-    <!-- Navbar -->
+    <!-- Full-width Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Brandon Vuong</a>
@@ -79,30 +62,44 @@
                     <li class="nav-item">
                         <a class="nav-link" href="photography.html">Photography Work</a>
                     </li>
+                    <!-- New DIY Brushes section link -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#diybrushes">DIY Brushes</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Main Header Section -->
+    <!-- Main Section -->
     <header class="header-section text-center">
         <div class="container">
-            <h1 class="display-4">Glitch Projects</h1>
-            <h2><i>Mished, Mashed, Moshed</i></h2>
+            <h1 class="display-4">My Journey Into an Artistic Chasm</h1>
+            <p class="lead">Creation. Unrestricted.</p>
         </div>
     </header>
 
-    <!-- Content Section -->
-    <section class="content-section">
+    <!-- About Me Section -->
+    <section class="py-5">
         <div class="container">
-            <!-- Centered iframe -->
-            <div class="iframe-container">
-                <iframe src="diypsbrushes/index.html" height="606" width="606" title="Iframe Example"></iframe>
+            <div class="row align-items-center">
+                <div class="col-md-4 text-center">
+                    <img src="pp.jpg" alt="profile_pic" class="img-fluid rounded" width="300">
+                </div>
+                <div class="col-md-8">
+                    <h2>About Me</h2>
+                    <p class="lead">My name is Brandon Vuong. I am an aspiring digital artist and dabble in other mediums. My interpretation of art is bringing about change and making strong statements that speak louder than the rioting souls we all carry individually within ourselves.</p>
+                    <h5><em>This portfolio is an embodiment of my slow and methodical descent into art and where I try to make sense of a nonsensical world with my own two hands.</em></h5>
+                    <p>
+                        <font size="5">Born and raised in the Silicon Valley, where rent is too high, and creativity is at an all-time low. My inspiration stems from Shepard Fairey and Banksy, where art becomes a weapon against the modern-day giants and tyrannical fists with their blur-bars in hand.</font>
+                    </p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Bootstrap 5 JS and Popper.js -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+    <!-- DIY Brushes Section -->
+    <section id="diybrushes" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center">DIY Brushes</h2>
+            <p class="lead text-center">Explore a selection of unique DIY Brushes for your creative projects. These brushes are perfect for experimenting and creating digital art with your own
