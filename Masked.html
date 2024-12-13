@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masked Project</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        img {
+            display: block;
+            margin: auto;
+            width: 400px; /* Set all images to 400px width */
+        }
+        .header-section {
+            padding: 3rem 1rem;
+        }
+        .content-section {
+            padding: 2rem 1rem;
+        }
+        .image-gallery img {
+            margin-bottom: 1rem;
+        }
+        .stacked-images {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Brandon Vuong</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="headache.html">Headache</a></li>
+                    <li class="nav-item"><a class="nav-link" href="diy_brushes.html">DIY Brushes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="glitch.html">Glitch Page</a></li>
+                    <li class="nav-item"><a class="nav-link" href="mememashup.html">Mememashup Page</a></li>
+                    <li class="nav-item"><a class="nav-link" href="minecraft_art.html">Minecraft Art</a></li>
+                    <li class="nav-item"><a class="nav-link" href="net_art.html">Net Art</a></li>
+                    <li class="nav-item"><a class="nav-link" href="traditional_work.html">Traditional Work</a></li>
+                    <li class="nav-item"><a class="nav-link" href="photography.html">Photography Work</a></li>
+                    <li class="nav-item"><a class="nav-link" href="masked.html">Masked Project</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="header-section text-center bg-dark text-white">
+        <div class="container">
+            <h1 class="display-2">Masked</h1>
+            <p class="lead">A conversation between data that takes the shape of art and manifests into our tangible world.</p>
+        </div>
+    </header>
+
+    <!-- Content Section -->
+    <section class="content-section text-center">
+        <div class="container">
+            <p class="mb-4"><em>
+                This project explores how technology breathes life into objects while preserving the essence of traditional art. Using digital sculpting tools like Blender, I created a Japanese-inspired Oni mask to highlight the interplay between materiality and immateriality.
+            </em></p>
+        </div>
+    </section>
+
+    <!-- Image Gallery -->
+    <section class="image-gallery text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="Mask1.jpg" alt="Artistic representation of a mask" class="img-fluid rounded">
+                </div>
+                <div class="col-md-6">
+                    <img src="mask2.jpg" alt="Detailed mask design" class="img-fluid rounded">
+                </div>
+            </div>
+            <div class="row mt-4">
+                <p class="mb-4"><em>
+                My Final sculpted piece
+                </em></p>
+                <div class="col-md-6 mx-auto">
+                    <!-- Trigger Modal -->
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#maskModal">
+                        <img src="mask3.jpg" alt="Process sketch of mask creation" class="img-fluid rounded">
+                    </a>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <p class="mb-4"><em>Final Print</em></p>
+                <div class="col-md-6 mx-auto">
+                    <!-- Placeholder for final print -->
+                    <img src="https://via.placeholder.com/400" alt="Final print of the mask" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="maskModal" tabindex="-1" aria-labelledby="maskModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="maskModalLabel">Larger View of the Mask</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <!-- Set width to 450px -->
+                    <img src="mask3.jpg" alt="Process sketch of mask creation" class="img-fluid rounded" style="width: 450px;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
