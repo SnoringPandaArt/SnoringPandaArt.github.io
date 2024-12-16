@@ -9,7 +9,8 @@
         img {
             display: block;
             margin: auto;
-            width: 400px; /* Set all images to 400px width */
+            max-width: 100%; /* Allow images to scale with container */
+            height: auto; /* Maintain aspect ratio */
         }
         .header-section {
             padding: 3rem 1rem;
@@ -24,6 +25,13 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+        }
+        .modal-body img {
+            max-width: 90%; /* Set max width for modal image */
+            height: auto;
+        }
+        .row {
+            justify-content: center;
         }
     </style>
 </head>
@@ -66,6 +74,9 @@
             <p class="mb-4"><em>
                 This project explores how technology breathes life into objects while preserving the essence of traditional art. Using digital sculpting tools like Blender, I created a Japanese-inspired Oni mask to highlight the interplay between materiality and immateriality.
             </em></p>
+            <p class="mb-4"><em>
+                My rough draft sculpt
+            </em></p>
         </div>
     </section>
 
@@ -73,10 +84,10 @@
     <section class="image-gallery text-center">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6 mb-4">
                     <img src="Mask1.jpg" alt="Artistic representation of a mask" class="img-fluid rounded">
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 mb-4">
                     <img src="mask2.jpg" alt="Detailed mask design" class="img-fluid rounded">
                 </div>
             </div>
@@ -84,18 +95,32 @@
                 <p class="mb-4"><em>
                 My Final sculpted piece
                 </em></p>
-                <div class="col-md-6 mx-auto">
+                <div class="col-md-6 mb-4">
                     <!-- Trigger Modal -->
                     <a href="#" data-bs-toggle="modal" data-bs-target="#maskModal">
                         <img src="mask3.jpg" alt="Process sketch of mask creation" class="img-fluid rounded">
                     </a>
                 </div>
+                <div class="col-md-6 mb-4">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#maskModal">
+                        <img src="revisedmask1.jpg" alt="Process sketch of mask creation" class="img-fluid rounded">
+                    </a>
+                </div>
             </div>
             <div class="row mt-4">
                 <p class="mb-4"><em>Final Print</em></p>
-                <div class="col-md-6 mx-auto">
+                <div class="col-md-3 mb-4">
                     <!-- Placeholder for final print -->
-                    <img src="https://via.placeholder.com/400" alt="Final print of the mask" class="img-fluid rounded">
+                    <img src="maskfinal (1).JPG" alt="Final print of the mask" class="img-fluid rounded">
+                </div>
+                <div class="col-md-3 mb-4">
+                    <img src="maskfinal (2).JPG" alt="Final print of the mask" class="img-fluid rounded">
+                </div>
+                <div class="col-md-3 mb-4">
+                    <img src="maskfinal (3).JPG" alt="Final print of the mask" class="img-fluid rounded">
+                </div>
+                <div class="col-md-3 mb-4">
+                    <img src="IMG_0487.JPG" alt="Final print of the mask" class="img-fluid rounded">
                 </div>
             </div>
         </div>
@@ -110,12 +135,20 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body text-center">
-                    <!-- Set width to 450px -->
-                    <img src="mask3.jpg" alt="Process sketch of mask creation" class="img-fluid rounded" style="width: 450px;">
+                    <img src="mask3.jpg" alt="Process sketch of mask creation" class="img-fluid rounded">
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- Text Section -->
+    <section class="content-section text-center">
+        <div class="container">
+            <p class="mb-6"><em>
+                The hand within the sculpture represents the transition from digital and immaterial concepts to tangible objects. It symbolizes the bridging of ideas initially conceived on a computer and physically manifested in the real world, allowing us to touch and hold what was once intangible. The inclusion of the Oni mask reflects the aesthetic that resonates with me, embodying my deep connection to Asian culture and its influence on my work.
+            </em></p>
+        </div>
+    </section>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
