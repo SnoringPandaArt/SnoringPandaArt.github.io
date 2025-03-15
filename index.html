@@ -7,85 +7,170 @@
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        /* Custom styles for header background */
-        .header-section {
-            background-color: #343a40; /* Dark Gray color */
+        /* Reset body margin and padding */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow-x: hidden;
+        }
+
+        /* Sidebar styles */
+        .sidebar {
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 250px;
+            background-color: rgba(33, 37, 41, 0.9); /* Slight transparency */
+            padding-top: 20px;
+            z-index: 10;
+        }
+
+        .sidebar a {
             color: white;
-            padding: 5rem 0; /* Padding for the header */
+            padding: 8px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .sidebar a:hover {
+            background-color: #575757;
+            color: #ddd;
+        }
+
+        .sidebar .nav-item {
+            padding-left: 20px;
+        }
+
+        /* Dropdown Menu Customization */
+        .dropdown-menu {
+            background-color: #212529; /* Dark background for dropdown */
+            border-color: #343a40; /* Darker border color */
+            display: none; /* Initially hide the dropdown */
+            opacity: 0; /* Start with 0 opacity */
+            transition: opacity 0.3s ease; /* Add transition for fade effect */
+        }
+
+        .dropdown-menu.show {
+            display: block; /* Show the dropdown when active */
+            opacity: 1; /* Make the dropdown fully visible */
+        }
+
+        .dropdown-item {
+            color: white; /* White text color */
+        }
+
+        .dropdown-item:hover {
+            background-color: #575757; /* Darker hover background */
+            color: #ddd; /* Lighter text on hover */
+        }
+
+        .dropdown-menu .dropdown-item.active {
+            background-color: #6c757d; /* Active item color */
+        }
+
+        /* Main content section style */
+        .content-section {
+            margin-left: 250px; /* Offset the main content to the right by the sidebar width */
+            padding: 20px; /* Add padding to the content */
+        }
+
+        /* Main Section */
+        .header-section {
+            background-color: rgba(52, 58, 64, 0.7); /* Dark semi-transparent background */
+            color: white;
+            padding: 5rem 0;
+            position: relative;
+            z-index: 5;
+        }
+
+        /* About Me Section */
+        .about-text {
+            font-size: 1.25rem; /* Consistent font size */
         }
     </style>
 </head>
 <body>
-    <!-- Full-width Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Brandon Vuong</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="headache.html">Headache</a> <!-- Updated link to the new page name -->
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="diy_brushes.html">DIY Brushes</a> <!-- Changed link to DIY Brushes -->
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="glitch.html">Glitch Page</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="mememashup.html">Mememashup Page</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="minecraft_art.html">Minecraft Art</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="net_art.html">Net ART</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="traditional_work.html">Traditional Work</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="photography.html">Photography Work</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="Masked.html">Masked Project</a>
-                    </li>
-                </ul>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="#" class="navbar-brand">Brandon Vuong</a>
+        <a href="index.html">Home</a>
+        
+        <!-- Dropdown for "My Digital Media Art!" -->
+        <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="digitalMediaDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                My Digital Media Art!
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="digitalMediaDropdown">
+                <li><a class="dropdown-item" href="headache.html">Headache</a></li>
+                <li><a class="dropdown-item" href="diy_brushes.html">DIY Brushes</a></li>
+                <li><a class="dropdown-item" href="glitch.html">Glitch Page</a></li>
+                <li><a class="dropdown-item" href="mememashup.html">Mememashup Page</a></li>
+                <li><a class="dropdown-item" href="minecraft_art.html">Minecraft Art</a></li>
+                <li><a class="dropdown-item" href="net_art.html">Net ART</a></li>
+                <!-- Added Masked Project here -->
+                <li><a class="dropdown-item" href="Masked.html">Masked Project</a></li>
+            </ul>
+        </div>
+
+        <!-- Dropdown for "Not DMA" -->
+        <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="notDMADropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Not DMA
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="notDMADropdown">
+                <li><a class="dropdown-item" href="traditional_work.html">Traditional Work</a></li>
+                <li><a class="dropdown-item" href="photography.html">Photography Work</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content-section">
+        <!-- Main Section -->
+        <header class="header-section text-center">
+            <div class="container">
+                <h1 class="display-4">My Journey Into an Artistic Chasm</h1>
+                <p class="lead">Creation. Unrestricted.</p>
             </div>
-        </div>
-    </nav>
+        </header>
 
-    <!-- Main Section -->
-    <header class="header-section text-center">
-        <div class="container">
-            <h1 class="display-4">My Journey Into an Artistic Chasm</h1>
-            <p class="lead">Creation. Unrestricted.</p>
-        </div>
-    </header>
-
-    <!-- About Me Section -->
-    <section class="py-5">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-sm-12 col-md-4 text-center">
-                    <img src="pp.jpg" alt="Brandon Vuong profile picture" class="img-fluid rounded" width="300">
-                </div>
-                <div class="col-sm-12 col-md-8">
-                    <h2>About Me</h2>
-                    <p class="lead">My name is Brandon Vuong. I am an aspiring digital artist and dabble in other mediums. My interpretation of art is bringing about change and making strong statements that speak louder than the rioting souls we all carry individually within ourselves.</p>
-                    <h5><em>This portfolio is an embodiment of my slow and methodical descent into art and where I try to make sense of a nonsensical world with my own two hands.</em></h5>
-                    <p style="font-size: 1.25rem;">Born and raised in the Silicon Valley, where rent is too high, and creativity is at an all-time low. My inspiration stems from Shepard Fairey and Banksy, where art becomes a weapon against the modern-day giants and tyrannical fists with their blur-bars in hand.</p>
+        <!-- About Me Section -->
+        <section class="py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-sm-12 col-md-4 text-center">
+                        <img src="pp.jpg" alt="profile_pic" class="img-fluid rounded" width="300">
+                    </div>
+                    <div class="col-sm-12 col-md-8 about-text">
+                        <h2>About Me</h2>
+                        <p class="lead">My name is Brandon Vuong—an aspiring digital artist who dabbles in various mediums, because why limit myself, right? Art, for me, isn’t just about creating something pretty; it’s about making loud, bold statements that cut through the noise of the world, louder than the constant chaos we all carry inside.</p>
+                        <p>This portfolio? It’s my slow, methodical descent into the abyss of creativity, where I try to make sense of a world that, let’s face it, rarely makes sense. But I’ll keep at it, using nothing but my hands to carve out my place.</p>
+                        <p>Born and raised in Silicon Valley—where the rent’s absurd and true creativity seems like a rare commodity—I draw inspiration from artists like Shepard Fairey and Banksy. They’ve turned art into a weapon, taking on modern-day giants and their iron fists, armed with nothing more than a spray can and sheer defiance.</p>
+                        <strong>Art isn’t just my passion—it’s my revolt.</strong>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
     <!-- Bootstrap 5 JS and Popper.js (for responsive navbar functionality) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JavaScript to enable the dropdown animation -->
+    <script>
+        // Ensure dropdown functionality works with Bootstrap's dropdown behavior
+        const dropdownMenus = document.querySelectorAll('.dropdown-menu');
+        dropdownMenus.forEach(menu => {
+            menu.addEventListener('transitionend', function() {
+                // Re-enable clicking on other dropdown items after animation completes
+                if (!menu.classList.contains('show')) {
+                    menu.style.opacity = 0; // Reset opacity after closing
+                }
+            });
+        });
+    </script>
 </body>
 </html>

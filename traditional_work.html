@@ -5,96 +5,195 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Traditional Work</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow-x: hidden;
+        }
+
+        /* Sidebar styles */
+        .sidebar {
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 250px;
+            background-color: rgba(33, 37, 41, 0.9); /* Slight transparency */
+            padding-top: 20px;
+            z-index: 10;
+        }
+
+        .sidebar a {
+            color: white;
+            padding: 8px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .sidebar a:hover {
+            background-color: #575757;
+            color: #ddd;
+        }
+
+        .sidebar .nav-item {
+            padding-left: 20px;
+        }
+
+        /* Dropdown Menu Customization */
+        .dropdown-menu {
+            background-color: #212529; /* Dark background for dropdown */
+            border-color: #343a40; /* Darker border color */
+            display: none; /* Initially hide the dropdown */
+            opacity: 0; /* Start with 0 opacity */
+            transition: opacity 0.3s ease; /* Add transition for fade effect */
+        }
+
+        .dropdown-menu.show {
+            display: block; /* Show the dropdown when active */
+            opacity: 1; /* Make the dropdown fully visible */
+        }
+
+        .dropdown-item {
+            color: white; /* White text color */
+        }
+
+        .dropdown-item:hover {
+            background-color: #575757; /* Darker hover background */
+            color: #ddd; /* Lighter text on hover */
+        }
+
+        .dropdown-menu .dropdown-item.active {
+            background-color: #6c757d; /* Active item color */
+        }
+
+        /* Main content section style */
+        .content-section {
+            margin-left: 250px; /* Offset the main content to the right by the sidebar width */
+            padding: 20px; /* Add padding to the content */
+        }
+
+        /* Header Section */
+        .header-section {
+            background-color: rgba(52, 58, 64, 0.7); /* Dark semi-transparent background */
+            color: white;
+            padding: 5rem 0;
+            position: relative;
+            z-index: 5;
+        }
+
+        /* About Me Section */
+        .about-text {
+            font-size: 1.25rem; /* Consistent font size */
+        }
+
+        img {
+            display: block;
+            margin: auto;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .row {
+            justify-content: center;
+        }
+
+        .iframe-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 600px;
+            margin-top: 30px;
+        }
+
+        iframe {
+            border: none;
+        }
+    </style>
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Brandon Vuong</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <li class="nav-item">
-                        <li class="nav-item">
-                        <li class="nav-item">
-                        <a class="nav-link" href="headache.html">Headache</a> <!-- Updated link to the new page name -->
-                    </li>
-                        <a class="nav-link" href="diy_brushes.html">DIY Brushes</a> <!-- Changed link to DIY Brushes -->
-                         </li>
-                        <a class="nav-link" href="glitch.html">Glitch Page</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="mememashup.html">Mememashup Page</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="minecraft_art.html">Minecraft Art</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="net_art.html">Net ART</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="traditional_work.html">Traditional Work</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="photography.html">Photography Work</a>
-                    </li>
-                     <li class="nav-item">
-                        <a class="nav-link active" href="Masked.html">Masked Project</a>
-                    </li>
-            </div>
-        </div>
-    </nav>
 
-    <!-- Main Section -->
-    <header class="bg-dark text-white text-center py-5">
-        <div class="container">
-            <h1 class="display-4">Traditional Work</h1>
-            <p class="lead">A collection of my traditional artwork, focusing on physical mediums.</p>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="#" class="navbar-brand">Brandon Vuong</a>
+        <a href="index.html">Home</a>
+        
+        <!-- Dropdown for "My Digital Media Art!" -->
+        <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="digitalMediaDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                My Digital Media Art!
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="digitalMediaDropdown">
+                <li><a class="dropdown-item" href="headache.html">Headache</a></li>
+                <li><a class="dropdown-item" href="diy_brushes.html">DIY Brushes</a></li>
+                <li><a class="dropdown-item" href="glitch.html">Glitch Page</a></li>
+                <li><a class="dropdown-item" href="mememashup.html">Mememashup Page</a></li>
+                <li><a class="dropdown-item" href="minecraft_art.html">Minecraft Art</a></li>
+                <li><a class="dropdown-item" href="net_art.html">Net ART</a></li>
+                <li><a class="dropdown-item" href="Masked.html">Masked Project</a></li>
+            </ul>
         </div>
-    </header>
 
-    <!-- Content Section -->
-    <section class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">Artwork Gallery</h2>
-            <div class="row">
-                <!-- First Image -->
-                <div class="col-md-4 mb-4">
-                    <img src="traditional_work_image1.png" alt="Traditional Work 1" class="img-fluid rounded">
+        <!-- Dropdown for "Not DMA" -->
+        <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="notDMADropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Not DMA
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="notDMADropdown">
+                <li><a class="dropdown-item" href="traditional_work.html">Traditional Work</a></li>
+                <li><a class="dropdown-item" href="photography.html">Photography Work</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content-section">
+        <!-- Header Section -->
+        <header class="header-section text-center">
+            <div class="container">
+                <h1 class="display-4">Traditional Work</h1>
+                <p class="lead">A collection of my traditional artwork, focusing on physical mediums.</p>
+            </div>
+        </header>
+
+        <!-- Content Section -->
+        <section class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-4">Artwork Gallery</h2>
+                <div class="row">
+                    <!-- First Image -->
+                    <div class="col-md-4 mb-4">
+                        <img src="traditional_work_image1.png" alt="Traditional Work 1" class="img-fluid rounded">
+                    </div>
+                    <!-- Second Image -->
+                    <div class="col-md-4 mb-4">
+                        <img src="traditional_work_image2.png" alt="Traditional Work 2" class="img-fluid rounded">
+                    </div>
+                    <!-- Third Image -->
+                    <div class="col-md-4 mb-4">
+                        <img src="traditional_work_image3.png" alt="Traditional Work 3" class="img-fluid rounded">
+                    </div>
+                    <!-- Fourth Image -->
+                    <div class="col-md-6 mb-4">
+                        <img src="traditional_work_image4.png" alt="Traditional Work 4" class="img-fluid rounded">
+                    </div>
+                    <!-- Fifth Image -->
+                    <div class="col-md-6 mb-4">
+                        <img src="traditional_work_image5.png" alt="Traditional Work 5" class="img-fluid rounded">
+                    </div>
                 </div>
-                <!-- Second Image -->
-                <div class="col-md-4 mb-4">
-                    <img src="traditional_work_image2.png" alt="Traditional Work 2" class="img-fluid rounded">
-                </div>
-                <!-- Third Image -->
-                <div class="col-md-4 mb-4">
-                    <img src="traditional_work_image3.png" alt="Traditional Work 3" class="img-fluid rounded">
-                </div>
-                <!-- Fourth Image -->
-                <div class="col-md-6 mb-4">
-                    <img src="traditional_work_image4.png" alt="Traditional Work 4" class="img-fluid rounded">
-                </div>
-                <!-- Fifth Image -->
-                <div class="col-md-6 mb-4">
-                    <img src="traditional_work_image5.png" alt="Traditional Work 5" class="img-fluid rounded">
+
+                <!-- Description Section -->
+                <div class="description-section text-center mt-5">
+                    <h2 class="mb-3">Description</h2>
+                    <p class="lead">
+                        These were my earlier works where I experimented with graphite and charcoal. I was drawn to these mediums because I feel that forms and structure took priority over color. Black n' white is where it is for me.
+                    </p>
                 </div>
             </div>
-
-            <!-- Description Section -->
-            <div class="description-section text-center mt-5">
-                <h2 class="mb-3">Description</h2>
-                <p class="lead">
-                   These were my earlier works where I experimented with graphite and charcoal. I was drawn to these mediums because I feel that forms and structure took priority over color. Black n' white is where it is for me.
-                </p>
-            </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
