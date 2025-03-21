@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Brandon Vuong's portfolio showcasing digital media art, traditional work, and photography.">
+    <meta name="description" content="Brandon Vuong's portfolio showcasing digital media art, traditional work, photography, and video creations.">
     <title>My Portfolio</title>
     <link rel="icon" href="path/to/favicon.ico" type="image/x-icon">
     <!-- Bootstrap 5 CSS -->
@@ -45,51 +45,10 @@
             padding-left: 20px;
         }
 
-        /* Dropdown Menu Customization */
-        .dropdown-menu {
-            background-color: #212529;
-            border-color: #343a40;
-            display: none;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .dropdown-menu.show {
-            display: block;
-            opacity: 1;
-        }
-
-        .dropdown-item {
-            color: white;
-        }
-
-        .dropdown-item:hover {
-            background-color: #575757;
-            color: #ddd;
-        }
-
-        .dropdown-menu .dropdown-item.active {
-            background-color: #6c757d;
-        }
-
         /* Main content section style */
         .content-section {
             margin-left: 250px;
             padding: 20px;
-        }
-
-        /* Main Section */
-        .header-section {
-            background-color: rgba(52, 58, 64, 0.7);
-            color: white;
-            padding: 5rem 0;
-            position: relative;
-            z-index: 5;
-        }
-
-        /* About Me Section */
-        .about-text {
-            font-size: 1.25rem;
         }
 
         /* Gallery Section */
@@ -98,6 +57,7 @@
             height: auto;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
         }
 
         .gallery {
@@ -107,6 +67,27 @@
         .gallery .col {
             margin-bottom: 30px;
         }
+
+        /* About Me Section */
+        .about-text {
+            font-size: 1.25rem;
+        }
+
+        /* Dropdown Menu Styling */
+        .dropdown-menu {
+            background-color: rgba(33, 37, 41, 0.9); /* Dark background with slight transparency */
+            color: white; /* White text color */
+        }
+
+        .dropdown-menu .dropdown-item {
+            color: white; /* Ensure dropdown items are white */
+        }
+
+        .dropdown-menu .dropdown-item:hover {
+            background-color: #575757; /* Highlight background on hover */
+            color: #ddd; /* Change text color when hovered */
+        }
+
     </style>
 </head>
 <body>
@@ -115,7 +96,7 @@
     <div class="sidebar">
         <a href="#" class="navbar-brand">Brandon Vuong</a>
         <a href="index.html">Home</a>
-        
+
         <!-- Dropdown for "My Digital Media Art!" -->
         <div class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="digitalMediaDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -142,6 +123,9 @@
                 <li><a class="dropdown-item" href="photography.html">Photography Work</a></li>
             </ul>
         </div>
+
+        <!-- New Video Creation Section -->
+        <a href="video_creation.html">Video Creation</a> <!-- Link to the new page for YouTube videos -->
     </div>
 
     <!-- Main Content -->
@@ -178,23 +162,38 @@
                 <h2 class="text-center">My Digital Media Art</h2>
                 <div class="row">
                     <div class="col-md-4 col-sm-6">
-                        <img src="image1.jpg" alt="DMA Art 1" class="img-fluid">
+                        <img src="image1.gif" alt="DMA Art 1" class="img-fluid" data-bs-toggle="modal" data-bs-target="#artModal" data-description="This GIF doesn’t exist... A simple photo I took in Seattle turned into something only imagination could dare dream to imagine. With the help of AI, I can bring dragons to life from just a photo.">
                     </div>
                     <div class="col-md-4 col-sm-6">
-                        <img src="image2.jpg" alt="DMA Art 2" class="img-fluid">
+                        <img src="image2.gif" alt="DMA Art 2" class="img-fluid" data-bs-toggle="modal" data-bs-target="#artModal" data-description="This GIF was inspired by the concept of movement and transition. It plays on the idea of shifting perspectives, capturing fleeting moments that tell a story of transformation.">
                     </div>
                     <div class="col-md-4 col-sm-6">
-                        <img src="image3.jpg" alt="DMA Art 3" class="img-fluid">
+                        <img src="image3.jpg" alt="DMA Art 3" class="img-fluid" data-bs-toggle="modal" data-bs-target="#artModal" data-description="Description for Art 3">
                     </div>
                     <div class="col-md-4 col-sm-6">
-                        <img src="image4.jpg" alt="DMA Art 4" class="img-fluid">
+                        <img src="image4.jpg" alt="DMA Art 4" class="img-fluid" data-bs-toggle="modal" data-bs-target="#artModal" data-description="Description for Art 4">
                     </div>
                     <div class="col-md-4 col-sm-6">
-                        <img src="image5.jpg" alt="DMA Art 5" class="img-fluid">
+                        <img src="image5.jpg" alt="DMA Art 5" class="img-fluid" data-bs-toggle="modal" data-bs-target="#artModal" data-description="Description for Art 5">
                     </div>
                 </div>
             </div>
         </section>
+    </div>
+
+    <!-- Modal for displaying description -->
+    <div class="modal fade" id="artModal" tabindex="-1" aria-labelledby="artModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="artModalLabel">Art Description</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p id="artDescription">Loading description...</p>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Bootstrap 5 JS and Popper.js -->
@@ -202,7 +201,16 @@
 
     <!-- Custom JavaScript -->
     <script>
-        // Add any custom JavaScript for dropdown or other interactivity here
+        // Capture image click events and dynamically update modal description
+        const images = document.querySelectorAll('.gallery img');
+        const artDescription = document.getElementById('artDescription');
+
+        images.forEach(img => {
+            img.addEventListener('click', function(e) {
+                const description = e.target.getAttribute('data-description');
+                artDescription.textContent = description;
+            });
+        });
     </script>
 </body>
 </html>

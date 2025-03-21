@@ -3,20 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DIY Brushes</title> <!-- Updated title -->
+    <title>DIY Brushes</title>
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        body {
-            background-color: #f8f9fa; /* Light background */
-            margin-left: 250px; /* Offset body content to the right of the sidebar */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow-x: hidden;
         }
-        .navbar {
-            background-color: #212529; /* Darker Gray */
-        }
-        .navbar-brand, .nav-link {
-            color: white !important; /* White text */
-        }
+
         /* Sidebar styles */
         .sidebar {
             height: 100vh;
@@ -45,69 +42,51 @@
             padding-left: 20px;
         }
 
-        /* Dropdown Menu Customization */
+        /* Dropdown Menu Styling */
         .dropdown-menu {
-            background-color: #212529; /* Dark background for dropdown */
-            border-color: #343a40; /* Darker border color */
-            display: none; /* Initially hide the dropdown */
-            opacity: 0; /* Start with 0 opacity */
-            transition: opacity 0.3s ease; /* Add transition for fade effect */
-        }
-
-        .dropdown-menu.show {
-            display: block; /* Show the dropdown when active */
-            opacity: 1; /* Make the dropdown fully visible */
-        }
-
-        .dropdown-item {
+            background-color: rgba(33, 37, 41, 0.9); /* Dark background with slight transparency */
             color: white; /* White text color */
         }
 
-        .dropdown-item:hover {
-            background-color: #575757; /* Darker hover background */
-            color: #ddd; /* Lighter text on hover */
+        .dropdown-menu .dropdown-item {
+            color: white; /* Ensure dropdown items are white */
         }
 
-        .dropdown-menu .dropdown-item.active {
-            background-color: #6c757d; /* Active item color */
+        .dropdown-menu .dropdown-item:hover {
+            background-color: #575757; /* Highlight background on hover */
+            color: #ddd; /* Change text color when hovered */
         }
 
         /* Main content section style */
         .content-section {
+            margin-left: 250px;
             padding: 20px;
-            background-color: #e9ecef; /* Light gray */
-            border-radius: 5px;
         }
 
-        /* Main Header Section */
+        /* Header Section */
         .header-section {
             background-color: #343a40; /* Dark Gray */
             color: white;
             padding: 40px 0;
         }
 
+        /* Image wrapper style */
         .image-wrapper {
-            border: 2px solid #dee2e6; /* Light border */
+            border: 2px solid #dee2e6;
             border-radius: 5px;
-            transition: transform 0.2s; /* Animation on hover */
+            transition: transform 0.2s;
             cursor: pointer;
         }
 
         .image-wrapper:hover {
-            transform: scale(1.05); /* Scale up on hover */
-        }
-
-        .image-container {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
+            transform: scale(1.05);
         }
 
         .iframe-container {
             display: flex;
-            justify-content: center; /* Centers the iframe horizontally */
-            align-items: center; /* Centers the iframe vertically */
-            height: 600px; /* Sets a height to ensure proper vertical centering */
+            justify-content: center;
+            align-items: center;
+            height: 600px;
         }
     </style>
 </head>
@@ -117,7 +96,7 @@
     <div class="sidebar">
         <a href="#" class="navbar-brand">Brandon Vuong</a>
         <a href="index.html">Home</a>
-        
+
         <!-- Dropdown for "My Digital Media Art!" -->
         <div class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="digitalMediaDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -144,15 +123,18 @@
                 <li><a class="dropdown-item" href="photography.html">Photography Work</a></li>
             </ul>
         </div>
+
+        <!-- New Video Creation Section -->
+        <a href="video_creation.html">Video Creation</a>
     </div>
 
     <!-- Main Content -->
     <div class="content-section">
-        <!-- Main Header Section -->
+        <!-- Header Section -->
         <header class="header-section text-center">
             <div class="container">
-                <h1 class="display-4">DIY Brushes</h1> <!-- Updated header -->
-                <h2><i>Brushes You Can Make</i></h2> <!-- Updated subtitle -->
+                <h1 class="display-4">DIY Brushes</h1>
+                <h2><i>Brushes You Can Make</i></h2>
             </div>
         </header>
 

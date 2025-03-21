@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Brandon Vuong's video creations showcasing YouTube videos I have made.">
+    <title>Video Creation - Brandon Vuong</title>
+    <link rel="icon" href="path/to/favicon.ico" type="image/x-icon">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Reset body margin and padding */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow-x: hidden;
+            background: linear-gradient(45deg, #ff7a18, #af002d, #319197, #e4e5e0);
+            background-size: 400% 400%;
+            animation: gradientAnimation 15s ease infinite;
+        }
+
+        /* Sidebar styles */
+        .sidebar {
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 250px;
+            background-color: rgba(33, 37, 41, 0.9); /* Slight transparency */
+            padding-top: 20px;
+            z-index: 10;
+        }
+
+        .sidebar a {
+            color: white;
+            padding: 8px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .sidebar a:hover {
+            background-color: #575757;
+            color: #ddd;
+        }
+
+        .sidebar .nav-item {
+            padding-left: 20px;
+        }
+
+        /* Dropdown menu styles */
+        .dropdown-menu {
+            background-color: #212529;
+            border-color: #343a40;
+        }
+
+        .dropdown-item {
+            color: white;
+        }
+
+        .dropdown-item:hover {
+            background-color: #575757;
+            color: #ddd;
+        }
+
+        /* Main content section style */
+        .content-section {
+            margin-left: 250px;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Video Section */
+        .video-embed {
+            margin-bottom: 30px;
+        }
+
+        /* Center video container */
+        .video-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px; /* Space between the videos */
+            flex-wrap: wrap;
+        }
+
+        /* Make the videos long horizontally */
+        .video-embed iframe {
+            width: 100%;
+            max-width: 1600px; /* Ensure the videos are longer horizontally */
+            height: 500px; /* Keeping a more horizontal aspect ratio */
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+        /* Text below each video */
+        .video-embed p {
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: white;
+            cursor: pointer; /* Make the title clickable */
+        }
+
+        /* Description Styling */
+        .video-description {
+            display: none; /* Initially hidden */
+            font-size: 1rem;
+            color: white;
+            margin-top: 10px;
+        }
+
+        /* Animation for gradient */
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="#" class="navbar-brand">Brandon Vuong</a>
+        <a href="index.html">Home</a>
+        
+        <!-- Dropdown for "My Digital Media Art!" -->
+        <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="digitalMediaDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                My Digital Media Art!
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="digitalMediaDropdown">
+                <li><a class="dropdown-item" href="headache.html">Headache</a></li>
+                <li><a class="dropdown-item" href="diy_brushes.html">DIY Brushes</a></li>
+                <li><a class="dropdown-item" href="glitch.html">Glitch Page</a></li>
+                <li><a class="dropdown-item" href="mememashup.html">Mememashup Page</a></li>
+                <li><a class="dropdown-item" href="minecraft_art.html">Minecraft Art</a></li>
+                <li><a class="dropdown-item" href="net_art.html">Net ART</a></li>
+                <li><a class="dropdown-item" href="Masked.html">Masked Project</a></li>
+            </ul>
+        </div>
+
+        <!-- Dropdown for "Not DMA" -->
+        <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="notDMADropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Not DMA
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="notDMADropdown">
+                <li><a class="dropdown-item" href="traditional_work.html">Traditional Work</a></li>
+                <li><a class="dropdown-item" href="photography.html">Photography Work</a></li>
+            </ul>
+        </div>
+
+        <!-- New Video Creation Section -->
+        <a href="video_creation.html">Video Creation</a> <!-- Link to the new page for YouTube videos -->
+    </div>
+
+    <!-- Main Content -->
+    <div class="content-section">
+        <!-- Main Section -->
+        <header class="header-section text-center">
+            <div class="container">
+                <h1 class="display-4">Video Creations</h1>
+                <p class="lead">Explore the videos I've made and get inspired!</p>
+            </div>
+        </header>
+
+        <!-- YouTube Video Embeds -->
+        <section class="container py-5 video-container">
+            <!-- First video -->
+            <div class="video-embed">
+                <p onclick="toggleDescription(1)">Video 1 Title</p>
+                <iframe src="https://www.youtube.com/embed/MV3DPjgOpyU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="video-description" id="video-description-1">
+                    This is a description for Video 1. Click the title to hide/show this description.
+                </div>
+            </div>
+            <!-- Second video -->
+            <div class="video-embed">
+                <p onclick="toggleDescription(2)">Video 2 Title</p>
+                <iframe src="https://www.youtube.com/embed/efgh5678" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="video-description" id="video-description-2">
+                    This is a description for Video 2. Click the title to hide/show this description.
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script>
+        // Function to toggle visibility of video description
+        function toggleDescription(videoId) {
+            const description = document.getElementById(`video-description-${videoId}`);
+            if (description.style.display === "none" || description.style.display === "") {
+                description.style.display = "block"; // Show description
+            } else {
+                description.style.display = "none"; // Hide description
+            }
+        }
+    </script>
+</body>
+</html>
