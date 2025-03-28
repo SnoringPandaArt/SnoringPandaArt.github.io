@@ -53,11 +53,15 @@
 
         /* Gallery Section */
         .gallery img {
-            max-width: 100%;
-            height: auto;
+            width: 100%; /* Ensure images fill the column width */
+            height: 300px; /* Set a fixed height for uniformity */
+            object-fit: cover; /* Ensure the images maintain their aspect ratio and fill the given space */
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             cursor: pointer;
+            display: block;
+            margin-left: auto;
+            margin-right: auto; /* Centers the image horizontally */
         }
 
         .gallery {
@@ -159,7 +163,7 @@
         <!-- DMA Gallery Section -->
         <section class="gallery">
             <div class="container">
-                <h2 class="text-center">My Digital Media Art</h2>
+                <h2 class="text-center">My Self-Taught Digital Media Art</h2>
                 <div class="row">
                     <div class="col-md-4 col-sm-6">
                         <img src="image1.gif" alt="DMA Art 1" class="img-fluid" data-bs-toggle="modal" data-bs-target="#artModal" data-description="This GIF doesn’t exist... A simple photo I took in Seattle turned into something only imagination could dare dream to imagine. With the help of AI, I can bring dragons to life from just a photo.">
@@ -175,6 +179,9 @@
                     </div>
                     <div class="col-md-4 col-sm-6">
                         <img src="logo.png" alt="DMA Art 5" class="img-fluid" data-bs-toggle="modal" data-bs-target="#artModal" data-description="For the start of my branding, I’ve chosen a panda to represent me in Adobe Illustrator. The panda’s black and white fur reflects the duality within myself, representing the balance and contrast that I bring to my work as an artist. Just as the panda’s simplicity creates a strong visual impact, I aim to do the same through my art—showcasing the beauty in contrasts and creating something memorable.">
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <img src="placeholder.jpg" alt="DMA Art 6" class="img-fluid" data-bs-toggle="modal" data-bs-target="#artModal" data-description="This is a placeholder for a new art piece. More details to come as the piece is completed.">
                     </div>
                 </div>
             </div>
