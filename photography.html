@@ -91,8 +91,9 @@
         img {
             display: block;
             margin: auto;
-            max-width: 100%;
-            height: auto;
+            width: 100%;
+            height: 300px; /* Set a fixed height for all images */
+            object-fit: cover; /* Ensure images cover the assigned space without stretching */
         }
 
         .row {
@@ -110,6 +111,7 @@
         iframe {
             border: none;
         }
+
     </style>
 </head>
 <body>
@@ -166,35 +168,35 @@
                 <div class="row">
                     <!-- First 3 Photos -->
                     <div class="col-md-4 mb-4">
-                        <img src="photo1.jpg" alt="Photography Example 1" class="img-fluid rounded" width="350">
+                        <img src="photo1.jpg" alt="Photography Example 1" class="img-fluid rounded">
                     </div>
                     <div class="col-md-4 mb-4">
-                        <img src="photo2.jpg" alt="Photography Example 2" class="img-fluid rounded" width="350">
+                        <img src="photo2.jpg" alt="Photography Example 2" class="img-fluid rounded">
                     </div>
                     <div class="col-md-4 mb-4">
-                        <img src="photo3.jpg" alt="Photography Example 3" class="img-fluid rounded" width="350">
+                        <img src="photo3.jpg" alt="Photography Example 3" class="img-fluid rounded">
                     </div>
 
                     <!-- Next 3 Photos -->
                     <div class="col-md-4 mb-4">
-                        <img src="photo4.jpg" alt="Photography Example 4" class="img-fluid rounded" width="350">
+                        <img src="photo4.jpg" alt="Photography Example 4" class="img-fluid rounded">
                     </div>
                     <div class="col-md-4 mb-4">
-                        <img src="photo5.jpg" alt="Photography Example 5" class="img-fluid rounded" width="350">
+                        <img src="photo5.jpg" alt="Photography Example 5" class="img-fluid rounded">
                     </div>
                     <div class="col-md-4 mb-4">
-                        <img src="photo6.jpg" alt="Photography Example 6" class="img-fluid rounded" width="350">
+                        <img src="photo6.jpg" alt="Photography Example 6" class="img-fluid rounded">
                     </div>
 
                     <!-- Last 3 Photos -->
                     <div class="col-md-4 mb-4">
-                        <img src="photo7.jpg" alt="Photography Example 7" class="img-fluid rounded" width="350">
+                        <img src="photo7.jpg" alt="Photography Example 7" class="img-fluid rounded">
                     </div>
                     <div class="col-md-4 mb-4">
-                        <img src="photo8.jpg" alt="Photography Example 8" class="img-fluid rounded" width="350">
+                        <img src="photo8.jpg" alt="Photography Example 8" class="img-fluid rounded">
                     </div>
                     <div class="col-md-4 mb-4">
-                        <img src="photo9.jpg" alt="Photography Example 9" class="img-fluid rounded" width="350">
+                        <img src="photo9.jpg" alt="Photography Example 9" class="img-fluid rounded">
                     </div>
                 </div>
             </div>
