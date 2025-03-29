@@ -91,8 +91,9 @@
 
         img {
             display: block;
-            margin: auto;
-            max-width: 100%;
+            margin: 0 auto;
+            width: 100%; /* Make image responsive */
+            max-width: 900px; /* Limit the width on larger screens */
             height: auto;
         }
 
@@ -122,6 +123,23 @@
         iframe {
             border: none;
         }
+
+        /* Mobile adjustments */
+        @media (max-width: 768px) {
+            .content-section {
+                padding: 15px; /* Reduce padding on small screens */
+            }
+
+            .image-wrapper {
+                max-width: 100%; /* Ensure image container scales on mobile */
+            }
+
+            img {
+                width: 100%; /* Ensure image fills its container */
+                max-width: 100%;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -178,7 +196,7 @@
             <div class="container text-center">
                 <!-- Image with Hover Effect -->
                 <div class="image-wrapper" data-bs-toggle="modal" data-bs-target="#mememashupModal">
-                    <img src="mememashup.png" alt="Mememashup" class="img-fluid rounded" width="900">
+                    <img src="mememashup.png" alt="Mememashup" class="img-fluid rounded">
                 </div>
                 <!-- Modal for Image -->
                 <div class="modal fade" id="mememashupModal" tabindex="-1" aria-labelledby="mememashupModalLabel" aria-hidden="true">
